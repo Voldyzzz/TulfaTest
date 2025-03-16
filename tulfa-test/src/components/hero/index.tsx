@@ -8,7 +8,8 @@ const Hero = () => {
   const [isHeroSectionVideoVisible, setIsHeroSectionVideoVisible] =
     useState<Boolean>(true);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const [isVideoEnd, setIsVideoEnd] = useState(false);
+  const [isTitleShown, setIsTitleShown] = useState(false);
+  const [isShown, setIsShown] = useState(true);
 
   const classAnimation = " animate__animated animate__slideOutUp animate__slow";
 
@@ -31,10 +32,15 @@ const Hero = () => {
   };
 
   const handleVideoEnd = () => {
-    setIsVideoEnd(true);
+    setIsTitleShown(true);
+
+    setTimeout(() => {
+      setIsShown(false);
+    }, 3000);
+
     setTimeout(() => {
       setIsHeroSectionVideoVisible(false);
-    }, 3000);
+    }, 3200);
   };
 
   useEffect(() => {
@@ -47,9 +53,7 @@ const Hero = () => {
       <div className="container">
         {isHeroSectionVideoVisible && (
           <div
-            className={`hero-section__wrapper${
-              isVideoEnd ? classAnimation : ""
-            }`}
+            className={`hero-section__wrapper${!isShown ? classAnimation : ""}`}
           >
             <video
               ref={videoRef}
@@ -63,14 +67,14 @@ const Hero = () => {
               Your browser does not support video.
             </video>
 
-            {isVideoEnd && (
-              <h1 className="animate__animated animate__zoomIn animate__slow">
+            {isTitleShown && (
+              <h1 className="animate__animated animate__slow animate__zoomIn">
                 Introducing
               </h1>
             )}
           </div>
         )}
-        {isVideoEnd && <VirtualProduct isVideoEnd={isVideoEnd} />}
+        {!isShown && <VirtualProduct />}
       </div>
     </section>
   );

@@ -12,6 +12,7 @@
 
 .virtual-wrapper {
   &__title {
+    height: 60px;
     font-size: 50px;
     background: linear-gradient(to right, #ff0000, #ff1493, #8a2be2, #0000ff);
     background-size: 200%;
@@ -19,6 +20,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 5s linear infinite;
+    margin-top: 20px;
   }
 
   &__image {
