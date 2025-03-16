@@ -1,0 +1,30 @@
+@keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.virtual-wrapper {
+  &__title {
+    font-size: 50px;
+    background: linear-gradient(to right, #ff0000, #ff1493, #8a2be2, #0000ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 5s linear infinite;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+  }
+}
