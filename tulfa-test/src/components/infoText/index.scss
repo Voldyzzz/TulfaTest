@@ -1,0 +1,20 @@
+.infoText {
+  padding: 40px 60px;
+  background: linear-gradient(
+    90deg,
+    rgb(4, 4, 149),
+    rgb(50, 50, 200),
+    rgb(4, 4, 149)
+  );
+
+  &__text {
+    font-size: 60px;
+    color: rgb(161, 156, 156);
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    &-white {
+      color: white;
+    }
+  }
+}

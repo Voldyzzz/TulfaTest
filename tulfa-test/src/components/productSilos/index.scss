@@ -1,0 +1,36 @@
+.productSilos {
+  padding: 40px;
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    position: relative; // Установили, чтобы absolute работал внутри этого контейнера
+
+    &__carousel {
+      width: 50px;
+      height: 700px;
+      background-color: rgb(219, 172, 172);
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    &__title {
+      font-size: 60px;
+      position: absolute;
+      top: 50%; // Центрируем по вертикали
+      left: 50%; // Центрируем по горизонтали
+      transform: translate(-125%, -200%); // Смещаем вверх и влево от центра
+      background: linear-gradient(
+        90deg,
+        rgb(4, 4, 149),
+        rgb(50, 100, 200),
+        rgb(255, 165, 0)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
