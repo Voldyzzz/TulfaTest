@@ -21,10 +21,32 @@
 body {
   font-family: "SF-Pro-Display", sans-serif;
   font-weight: 400;
-}
 
-.container {
-  width: 100%;
-  max-width: 1920px;
-  text-align: center;
+  .container {
+    width: 100%;
+    max-width: 1920px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .backgroundCarousels {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    pointer-events: none;
+    z-index: 1;
+
+    &-carousel {
+      width: 50px;
+      height: 100%;
+      background-color: rgb(227, 118, 118);
+      opacity: 0.3;
+    }
+  }
 }
