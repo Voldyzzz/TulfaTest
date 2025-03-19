@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import "./modal.scss";
-import Carousels from "../Carousels";
 import imgSouce from "../../../images/Silo Images/6367-beige-basket-isolated-on-a-transparent-backg-2023-11-27-04-51-12-utc.png";
 
 type Props = {
@@ -35,7 +34,6 @@ const Modal = ({ isModal, setIsModal }: Props) => {
             angles
           </h2>
           <div className="imagesWrapper">
-            <Carousels />
             <img src={imgSouce} alt="Silo image" className="first-image" />
             <img src={imgSouce} alt="Silo image" className="second-image" />
           </div>
