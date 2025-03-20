@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./modal.scss";
-import imgSouce from "../../../images/Silo Images/6367-beige-basket-isolated-on-a-transparent-backg-2023-11-27-04-51-12-utc.png";
+import imgSouce from "../../../images/Silo Images/6367-beige-basket-isolated-on-a-transparent-backg-2023-11-27-04-51-12-utc-removebg-preview.png";
 
 type Props = {
   isModal: boolean;
@@ -27,7 +27,7 @@ const Modal = ({ isModal, setIsModal }: Props) => {
       <div className="overlay">
         <div className="modal-content">
           <button className="close-modal" onClick={handleCloseModal}>
-            Close
+            <i className="fa-solid fa-circle-xmark fa-xl"></i>
           </button>
           <h2 className="title">
             Ultra-high-definition images of your furniture shot from diffent

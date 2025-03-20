@@ -13,14 +13,19 @@ const ProductSilos = () => {
     <section className="productSilos">
       <div className="container">
         <div className="productSilos__wrapper">
-          <h3 className="productSilos__wrapper__title">Product Silos</h3>
-          <button
-            className="productSilos__wrapper__button"
-            onClick={toggleModal}
-          >
-            <i className="fa-solid fa-plus" style={{ color: "#5b409" }}></i>
-            Take a closer look
-          </button>
+          <div className="productSilos__wrapper-block">
+            <h3 className="productSilos__wrapper-block__title">
+              Product Silos
+            </h3>
+            <button
+              className="productSilos__wrapper-block__button"
+              onClick={toggleModal}
+            >
+              <i className="fa-solid fa-plus" style={{ color: "#5b409" }}></i>
+              Take a closer look
+            </button>
+          </div>
+
           <img src={imgSouce} alt="Silo" />
 
           {isModal && <Modal setIsModal={setIsModal} isModal={isModal} />}

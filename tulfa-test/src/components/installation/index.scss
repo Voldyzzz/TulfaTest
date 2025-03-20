@@ -7,7 +7,6 @@
     color: rgb(7, 7, 72);
     margin: 0 auto;
     padding: 100px 0;
-    z-index: 1;
   }
 
   &-title {
@@ -23,7 +22,6 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 300px 0;
-    z-index: 1;
+    margin: 100px 0 150px;
   }
 }

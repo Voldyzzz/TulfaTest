@@ -29,7 +29,7 @@ const ImageSlider = ({ slides }: Props) => {
           <i className="fa-solid fa-arrow-down"></i>
         </div>
         <div
-          className="slide"
+          className="slide animate__slideInUp"
           style={{ backgroundImage: `url(${slides[currentIndex]})` }}
         ></div>
       </div>
